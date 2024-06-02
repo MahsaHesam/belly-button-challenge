@@ -16,7 +16,7 @@ function init() {
   d3.json(url).then((data) => {
     csvData = data;  
     // fill drop down
-    // draw chart 
+    
     fillDrowpDown(csvData);
 
   });

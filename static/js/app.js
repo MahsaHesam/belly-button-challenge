@@ -6,8 +6,11 @@ var csvData;
 // Initialise the function
 function init() {
 
-  
-  
+
+
+
+
+
 
   // Use D3 to get and select the drop down Menu
   d3.json(url).then((data) => {
@@ -19,10 +22,16 @@ function init() {
   });
 };
 
+
+
+
 function fillDrowpDown(data){
   let dropdownMenu = d3.select("#selDataset");
     // Set a variable for the sample names
   let names = data.names;
+
+
+
 
   // Add  samples to dropdown menu
   names.forEach((id) => {
@@ -34,11 +43,18 @@ function fillDrowpDown(data){
       .text(id)
       .property("value",id);
   });
+  
+
 
   // Set the first sample from the list
   let sample_one = names[0];
   buildDashboard(sample_one, data);
 }
+
+
+
+
+
 // Function that populates metadata info
 function buildMetadata(sample, data) {
 
